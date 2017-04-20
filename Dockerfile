@@ -14,8 +14,9 @@ RUN apk upgrade --no-cache && \
       python \
       git && \
     mkdir -p /opt/ && \
-    git clone --depth 1 https://github.com/rembo10/headphones.git
-    rm -rf /tmp/* \
+    git clone --depth 1 https://github.com/rembo10/headphones.git /opt/headphones && \
+    rm -rf /opt/headphones/.git \
+           /tmp/* \
            /var/cache/apk/*  \
            /var/tmp/*
     
