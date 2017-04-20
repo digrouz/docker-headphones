@@ -12,10 +12,9 @@ https://github.com/rembo10/headphones
 
     docker create --name=headphones  \
       -v /etc/localtime:/etc/localtime:ro \
-      -v <path to headphones config>:/opt/headphones/setup.cfg \
-      -v <path to headphones logs>:/opt/headphones/logs \
-      -e DOCKUID=<UID default:10016> \
-      -e DOCKGID=<GID default:10016> \
+      -v <path to headphones config>:/config \
+      -e DOCKUID=<UID default:10017> \
+      -e DOCKGID=<GID default:10017> \
       -p 8181:8181/udp digrouz/docker-headphones headphones
 
 ## Environment Variables
@@ -24,11 +23,11 @@ When you start the `headphones` image, you can adjust the configuration of the `
 
 ### `DOCKUID`
 
-This variable is not mandatory and specifies the user id that will be set to run the application. It has default value `10016`.
+This variable is not mandatory and specifies the user id that will be set to run the application. It has default value `10017`.
 
 ### `DOCKGID`
 
-This variable is not mandatory and specifies the group id that will be set to run the application. It has default value `10016`.
+This variable is not mandatory and specifies the group id that will be set to run the application. It has default value `10017`.
 
 ## Notes
 
