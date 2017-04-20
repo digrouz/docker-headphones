@@ -20,7 +20,7 @@ RUN apk upgrade --no-cache && \
            /var/tmp/*
     
 # Expose volumes
-VOLUME ["/config"]
+VOLUME ["/config","/audio"]
 
 # Expose ports
 EXPOSE 8181

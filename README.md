@@ -13,6 +13,7 @@ https://github.com/rembo10/headphones
     docker create --name=headphones  \
       -v /etc/localtime:/etc/localtime:ro \
       -v <path to headphones config>:/config \
+      -v <path to music library>:/audio \
       -e DOCKUID=<UID default:10017> \
       -e DOCKGID=<GID default:10017> \
       -p 8181:8181/udp digrouz/docker-headphones headphones
