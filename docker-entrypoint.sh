@@ -80,6 +80,7 @@ if [ "$1" = 'headphones' ]; then
   if [ ! -f /config/config.ini ]; then
     cp /opt/headphones/config.ini /config/config.ini
   fi
+  sed -i "s|http_host\s*=\s*localhost|daemonize = 0.0.0.0|g" /config/config.ini
   chown -R "${MYUSER}":"${MYUSER}" /config /opt/headphones
   exec su-exec "${MYUSER}" python /opt/headphones/Headphones.py --nolaunch --config /config/config.ini --datadir /config
 else
